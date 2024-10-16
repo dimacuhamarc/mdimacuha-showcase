@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import NavigationBar from '@/components/common/NavigationBar';
 
 interface MainProviderProps {
   children: ReactNode;
@@ -6,8 +7,9 @@ interface MainProviderProps {
 
 export const MainProvider = ({ children }: MainProviderProps) => {
   return (
-    <div className="w-full h-full px-56">
-      {children}
-    </div>
+    <>
+      <NavigationBar />
+      <div className="w-full h-full px-56">{children}</div>
+    </>
   );
 };
